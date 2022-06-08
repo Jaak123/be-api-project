@@ -34,31 +34,6 @@ const register = async (req, res, next) => {
         return;
       })
       .catch(next);
-    // let newUser = new Users({
-    //   _id: new mongoose.Types.ObjectId(),
-    //   name: req.body.name,
-    //   email: req.body.email,
-    //   phone: req.body.phone,
-    //   password: req.body.password,
-    //   role_id: req.body.role_id,
-    //   created_date: req.body.created_date,
-    //   last_activity: req.body.last_activity,
-    // });
-    // newUser
-    //   .save()
-    //   .then((data) => {
-    //     res.status(201).json({
-    //       message: "Handling POST requests to /users",
-    //       createdProduct: data,
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     res.status(201).json({
-    //       message: "Handling POST requests to /products",
-    //       createdProduct: err,
-    //     });
-    //   });
   } else {
     return res.json({
       error: "The input field is empty",
